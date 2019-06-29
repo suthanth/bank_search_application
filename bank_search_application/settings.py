@@ -85,7 +85,11 @@ if ON_HEROKU:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': 'bank_management',
+            'NAME': 'd7nhn1erb7o60c',
+            'USER': 'szcibcvkupkxjf',
+            'PASSWORD': '7851f0d31d3506257dfbc4e81471db516b5ca4ba6bb9a016798066d1b18e9533',
+            'HOST': 'ec2-54-221-215-228.compute-1.amazonaws.com',
+            'PORT': '5432'
         }
     }
 else:
