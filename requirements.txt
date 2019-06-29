@@ -5,4 +5,4 @@ PyGreSQL==5.0.7
 psycopg2==2.8.2
 djangorestframework_simplejwt
 django_heroku
-Gunicorn====19.9.0
+Gunicorn==19.9.0
