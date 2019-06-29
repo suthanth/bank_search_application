@@ -85,7 +85,7 @@ if ON_HEROKU:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': 'postgresql',
+            'NAME': 'bank_management',
         }
     }
 else:
