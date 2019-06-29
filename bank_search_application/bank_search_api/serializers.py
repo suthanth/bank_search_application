@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from bank_search_application.bank_search_api.models import Banks, Branches, Users
+from bank_search_application.bank_search_api.models import Banks, Branches
 
 
 class BankSerializer(serializers.ModelSerializer):
@@ -16,12 +16,3 @@ class BranchSerializer(serializers.ModelSerializer):
     class Meta:
         model = Branches
         fields = ('ifsc', 'branch', 'address', 'city', 'district', 'state', 'bank', 'bank_details')
-
-
-class LoginSerializer(serializers.ModelSerializer):
-    password = serializers.CharField(write_only=True)
-
-    class Meta:
-        model = Users
-        # fields = ('username', 'password')
-        fields = ('user', 'password')

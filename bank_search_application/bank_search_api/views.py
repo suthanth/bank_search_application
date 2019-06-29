@@ -1,4 +1,6 @@
 from rest_framework import generics, status
+from rest_framework.pagination import LimitOffsetPagination
+from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 
 from bank_search_application.bank_search_api.models import Banks, Branches
@@ -9,6 +11,8 @@ class BankGetView(generics.RetrieveAPIView):
 
     queryset = Branches.objects.all()
     serializer_class = BranchSerializer
+    permission_classes = (IsAuthenticated,)
+    pagination_class = LimitOffsetPagination
 
     def get(self, request, *args, **kwargs):
         try:
@@ -32,6 +36,8 @@ class BranchListView(generics.RetrieveAPIView):
 
     queryset = Branches.objects.all()
     serializer_class = BranchSerializer
+    permission_classes = (IsAuthenticated,)
+    pagination_class = LimitOffsetPagination
 
     def get(self, request, *args, **kwargs):
         try:
