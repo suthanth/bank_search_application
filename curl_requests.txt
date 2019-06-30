@@ -1,0 +1,45 @@
+curl -X GET \
+  https://bank-search-applications.herokuapp.com/api/token/ \
+  -H 'Content-Type: application/json' \
+  -H 'Postman-Token: 8e019749-7e4a-40a3-96ab-3ae47ed9cd5d' \
+  -H 'cache-control: no-cache' \
+  -d '{
+    "username": "admin",
+    "password": "admin"
+}'
+
+curl -X GET \
+  https://bank-search-applications.herokuapp.com/api/token/refresh/ \
+  -H 'Content-Type: application/json' \
+  -H 'Postman-Token: a7045919-ab17-4c16-bb23-62aded16ae42' \
+  -H 'cache-control: no-cache' \
+  -d '{
+    "refresh": ""
+}'
+
+
+curl -X GET \
+  'https://bank-search-applications.herokuapp.com/bankApi/branchDetails?bank_name=state%20bank%20of%20india&city=Bangalore' \
+  -H 'Accept: */*' \
+  -H 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTYyMjcwNTkzLCJqdGkiOiJiNTRhOGI5YWJhM2Q0ODIyYTQ0YWFjYjIyM2MzN2FkOCIsInVzZXJfaWQiOjF9.0I8C4dong7jf3O1HeRNHetGY6rsMjNu4955crmk5iQ8' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Connection: keep-alive' \
+  -H 'Host: bank-search-applications.herokuapp.com' \
+  -H 'Postman-Token: 99c74d51-c2e5-4b86-9026-18328c8bcfc8,c1a4aba0-5e44-4101-b1f0-708a37c7db5b' \
+  -H 'User-Agent: PostmanRuntime/7.15.0' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'cache-control: no-cache'
+
+curl -X GET \
+  https://bank-search-applications.herokuapp.com/bankApi/bankDetails/ifscsbibnk \
+  -H 'Accept: */*' \
+  -H 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTYyMjcwNTkzLCJqdGkiOiJiNTRhOGI5YWJhM2Q0ODIyYTQ0YWFjYjIyM2MzN2FkOCIsInVzZXJfaWQiOjF9.0I8C4dong7jf3O1HeRNHetGY6rsMjNu4955crmk5iQ8' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Connection: keep-alive' \
+  -H 'Host: bank-search-applications.herokuapp.com' \
+  -H 'Postman-Token: 954a82c5-e0e9-442a-b824-3733ca435f91,1284f61b-19ae-4b2c-b621-47943c2f8a4a' \
+  -H 'User-Agent: PostmanRuntime/7.15.0' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'cache-control: no-cache'
+
+
