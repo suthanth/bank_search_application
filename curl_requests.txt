@@ -1,22 +1,4 @@
-curl -X GET \
-  https://bank-search-applications.herokuapp.com/api/token/ \
-  -H 'Content-Type: application/json' \
-  -H 'Postman-Token: 8e019749-7e4a-40a3-96ab-3ae47ed9cd5d' \
-  -H 'cache-control: no-cache' \
-  -d '{
-    "username": "admin",
-    "password": "admin"
-}'
-
-curl -X GET \
-  https://bank-search-applications.herokuapp.com/api/token/refresh/ \
-  -H 'Content-Type: application/json' \
-  -H 'Postman-Token: a7045919-ab17-4c16-bb23-62aded16ae42' \
-  -H 'cache-control: no-cache' \
-  -d '{
-    "refresh": ""
-}'
-
+Curl request to fetch all branch details given bank name: ABHYUDAYA COOPERATIVE BANK LIMITED and city: MUMBAI
 
 curl -X GET \
   'https://bank-search-applications.herokuapp.com/bankApi/branchDetails?bank_name=ABHYUDAYA%20COOPERATIVE%20BANK%20LIMITED&city=MUMBAI' \
@@ -30,6 +12,9 @@ curl -X GET \
   -H 'accept-encoding: gzip, deflate' \
   -H 'cache-control: no-cache'
 
+========================================================================================================================
+Curl request to fetch bank details given IFSC code: ABHY0065001
+
 curl -X GET \
   https://bank-search-applications.herokuapp.com/bankApi/bankDetails/ABHY0065001 \
   -H 'Accept: */*' \
@@ -41,5 +26,32 @@ curl -X GET \
   -H 'User-Agent: PostmanRuntime/7.15.0' \
   -H 'accept-encoding: gzip, deflate' \
   -H 'cache-control: no-cache'
+
+========================================================================================================================
+Curl request to create a JWT Token. This request return Access token which has an expiry of 5 days and refresh token
+has an expiry of 10 days. And use the Access key as JWT key to make API requests
+
+curl -X GET \
+  https://bank-search-applications.herokuapp.com/api/token/ \
+  -H 'Content-Type: application/json' \
+  -H 'Postman-Token: 8e019749-7e4a-40a3-96ab-3ae47ed9cd5d' \
+  -H 'cache-control: no-cache' \
+  -d '{
+    "username": "admin",
+    "password": "admin"
+}'
+========================================================================================================================
+Curl request to get a new Access token. Use this request if acces key get expired and renew it using refresh token
+
+curl -X GET \
+  https://bank-search-applications.herokuapp.com/api/token/refresh/ \
+  -H 'Content-Type: application/json' \
+  -H 'Postman-Token: a7045919-ab17-4c16-bb23-62aded16ae42' \
+  -H 'cache-control: no-cache' \
+  -d '{
+    "refresh": ""
+}'
+========================================================================================================================
+
 
 
