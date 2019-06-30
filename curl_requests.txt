@@ -19,19 +19,19 @@ curl -X GET \
 
 
 curl -X GET \
-  'https://bank-search-applications.herokuapp.com/bankApi/branchDetails?bank_name=state%20bank%20of%20india&city=Bangalore' \
+  'https://bank-search-applications.herokuapp.com/bankApi/branchDetails?bank_name=ABHYUDAYA%20COOPERATIVE%20BANK%20LIMITED&city=MUMBAI' \
   -H 'Accept: */*' \
   -H 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTYyMjcwNTkzLCJqdGkiOiJiNTRhOGI5YWJhM2Q0ODIyYTQ0YWFjYjIyM2MzN2FkOCIsInVzZXJfaWQiOjF9.0I8C4dong7jf3O1HeRNHetGY6rsMjNu4955crmk5iQ8' \
   -H 'Cache-Control: no-cache' \
   -H 'Connection: keep-alive' \
   -H 'Host: bank-search-applications.herokuapp.com' \
-  -H 'Postman-Token: 99c74d51-c2e5-4b86-9026-18328c8bcfc8,c1a4aba0-5e44-4101-b1f0-708a37c7db5b' \
+  -H 'Postman-Token: 7bce11a2-1f34-450e-98d0-95bbf211cf1d,6e543d99-b888-47d8-8c3c-cffccb0830a5' \
   -H 'User-Agent: PostmanRuntime/7.15.0' \
   -H 'accept-encoding: gzip, deflate' \
   -H 'cache-control: no-cache'
 
 curl -X GET \
-  https://bank-search-applications.herokuapp.com/bankApi/bankDetails/ifscsbibnk \
+  https://bank-search-applications.herokuapp.com/bankApi/bankDetails/ABHY0065001 \
   -H 'Accept: */*' \
   -H 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTYyMjcwNTkzLCJqdGkiOiJiNTRhOGI5YWJhM2Q0ODIyYTQ0YWFjYjIyM2MzN2FkOCIsInVzZXJfaWQiOjF9.0I8C4dong7jf3O1HeRNHetGY6rsMjNu4955crmk5iQ8' \
   -H 'Cache-Control: no-cache' \
