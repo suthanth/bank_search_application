@@ -1,7 +1,7 @@
 Curl request to fetch all branch details given bank name: ABHYUDAYA COOPERATIVE BANK LIMITED and city: MUMBAI
 
 curl -X GET \
-  'https://bank-search-applications.herokuapp.com/bankApi/branchDetails?bank_name=ABHYUDAYA%20COOPERATIVE%20BANK%20LIMITED&city=MUMBAI' \
+  'https://bank-search-applications.herokuapp.com/bankApi/branchDetails?bank_name=ABHYUDAYA%20COOPERATIVE%20BANK%20LIMITED&city=MUMBAI&offset=5&limit=10' \
   -H 'Accept: */*' \
   -H 'Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTYyMjcwNTkzLCJqdGkiOiJiNTRhOGI5YWJhM2Q0ODIyYTQ0YWFjYjIyM2MzN2FkOCIsInVzZXJfaWQiOjF9.0I8C4dong7jf3O1HeRNHetGY6rsMjNu4955crmk5iQ8' \
   -H 'Cache-Control: no-cache' \
