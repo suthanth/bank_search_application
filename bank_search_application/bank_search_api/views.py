@@ -33,17 +33,18 @@ class BankGetView(generics.RetrieveAPIView):
 
 
 class BranchListView(generics.RetrieveAPIView):
-
+    pagination_class = LimitOffsetPagination
     queryset = Branches.objects.all()
     serializer_class = BranchSerializer
     permission_classes = (IsAuthenticated,)
-    pagination_class = LimitOffsetPagination
 
     def get(self, request, *args, **kwargs):
         try:
             bank = Banks.objects.get(name=request.GET['bank_name'])
             application_data = list(self.queryset.filter(bank=bank.id, city=request.GET['city']))
-            branch_list = BranchSerializer(application_data, many=True).data
+            page = LimitOffsetPagination()
+            paginated_data = page.paginate_queryset(application_data, request)
+            branch_list = BranchSerializer(paginated_data, many=True).data
             return Response(
                 data=branch_list,
                 status=status.HTTP_200_OK
